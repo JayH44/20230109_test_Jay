@@ -1,0 +1,170 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: relative;
+  width: 1440px;
+  height: 940px;
+
+  background: #ffffff;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+
+  width: 1440px;
+  height: 60px;
+
+  background: #dddddd;
+}
+
+header h1 {
+  position: absolute;
+  width: 57px;
+  height: 29px;
+  left: 17px;
+  top: 16px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: -0.5px;
+
+  color: #000000;
+}
+
+header button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+
+  width: 100px;
+  height: 60px;
+
+  background: #454545;
+  border-radius: 0px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.5px;
+
+  color: #ffffff;
+}
+
+header button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  isolation: isolate;
+
+  width: 1440px;
+  height: 480px;
+  background: #bbbbbb;
+}
+
+slider p {
+  width: 66px;
+  height: 29px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: -0.5px;
+
+  color: #000000;
+}
+
+slider ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  position: absolute;
+  width: 34px;
+  height: 8px;
+  left: 703px;
+  top: 454px;
+}
+
+slider ul li {
+  width: 8px;
+  height: 8px;
+
+  background: #d9d9d9;
+}
+
+.imgList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 0;
+  gap: 20px;
+
+  width: 1440px;
+  height: 400px;
+
+  background: #cccccc;
+}
+
+.imgList li {
+  width: 250px;
+  height: 300px;
+
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imgList li img {
+  width: 250px;
+  height: 300px;
+  object-position: center;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.imgList li img:hover {
+  transform: scale(1.4);
+}
