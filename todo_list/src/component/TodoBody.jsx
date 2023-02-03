@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import TodoItem from './TodoItem';
 
 function TodoBody({ todos, setTodos }) {
-  console.log('todobody');
   return (
     <Container>
       <TodoList>
@@ -16,7 +15,6 @@ function TodoBody({ todos, setTodos }) {
 }
 
 const Container = styled.div`
-  padding: 10px;
   flex: 1;
 `;
 

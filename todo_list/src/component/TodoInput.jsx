@@ -5,7 +5,6 @@ function TodoInput({ setTodos }) {
   const [text, setText] = useState('');
   const nextId = useRef(4);
   const inputRef = useRef();
-  console.log('todoinput');
 
   const handleInput = (e) => {
     setText(e.target.value);
@@ -43,7 +42,7 @@ const Container = styled.form`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border-top: 1px solid black;
+  border-top: 1px solid #b1ccf3;
   gap: 10px;
 `;
 
@@ -53,14 +52,17 @@ const Input = styled.input`
   border: none;
 
   padding-left: 10px;
+  border-radius: 10px;
 `;
 const Button = styled.button`
   width: 100%;
   height: 25px;
+  color: white;
   border: none;
   background-color: #04acfa;
   border-radius: 10px;
   cursor: pointer;
+  transition: background 0.4s;
 
   &:hover {
     background-color: #057eb6;

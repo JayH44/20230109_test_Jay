@@ -7,8 +7,6 @@ import {
 } from 'react-icons/md';
 
 function TodoItem({ todo, setTodos }) {
-  console.log('todoitem');
-
   const deleteTodo = (id) => {
     if (window.confirm('삭제 하시겠습니까?'))
       setTodos({ type: 'DELETE_TODO', id });
@@ -24,7 +22,7 @@ function TodoItem({ todo, setTodos }) {
         {todo.done ? <MdCheckCircleOutline /> : <MdRadioButtonUnchecked />}
         <span>{todo.text}</span>
       </TextBox>
-      <Button onClick={() => deleteTodo(todo.id)}>
+      <Button done={todo.done} onClick={() => deleteTodo(todo.id)}>
         <MdOutlineDelete />
       </Button>
     </Container>
@@ -34,32 +32,45 @@ function TodoItem({ todo, setTodos }) {
 const Container = styled.li`
   display: flex;
   justify-content: space-between;
+  padding: 0 10px;
 `;
 const TextBox = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
 
-  ${({ done }) =>
-    done &&
-    css`
-      text-decoration: line-through;
-    `}
+  span {
+    border-bottom: 1px solid #2778e9;
+  }
 
   svg {
     cursor: pointer;
   }
+
+  ${({ done }) =>
+    done &&
+    css`
+      text-decoration: line-through;
+      span {
+        border-bottom: none;
+      }
+    `}
 `;
 
 const Button = styled.button`
   background-color: none;
   border: none;
   cursor: pointer;
-  opacity: 0;
+  opacity: ${({ done }) => (done ? 1 : 0)};
   width: 20px;
 
   &:hover {
     opacity: 1;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
   }
 `;
 

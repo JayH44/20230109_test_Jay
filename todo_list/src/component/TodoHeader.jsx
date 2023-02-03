@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 function TodoHeader({ todos }) {
-  console.log('todoheader');
   const dateStr = new Date().toLocaleDateString('ko-KR', { dateStyle: 'full' });
   const length = todos.length;
   const count = todos.filter((todo) => todo.done).length;
@@ -12,7 +11,7 @@ function TodoHeader({ todos }) {
     <Container>
       <h1>{dateStr}</h1>
       <p>
-        완료 {count}/{length}, {percent}%
+        완료 {count}/{length}, 진행률 {percent}%
       </p>
       <PercentageWrapper>
         <PercentageBar percent={percent} />
@@ -26,17 +25,20 @@ const Container = styled.div`
   flex-direction: column;
   gap: 5px;
   padding: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #b1ccf3;
+
+  p {
+    font-size: 0.9rem;
+  }
 `;
 const PercentageWrapper = styled.div`
-  border: 1px solid black;
   background-color: white;
   height: 15px;
   border-radius: 10px;
   overflow: hidden;
 `;
 const PercentageBar = styled.div`
-  background-color: blue;
+  background-color: #04acfa;
   width: 100%;
   height: 100%;
 

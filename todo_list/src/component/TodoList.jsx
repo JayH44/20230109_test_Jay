@@ -44,14 +44,15 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   width: 400px;
-  min-height: 700px;
+  max-height: 700px;
+  height: 100vh;
   margin: 60px auto;
 
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  background-color: #eee;
+  background-color: #ecf5ec;
   border-radius: 10px;
   overflow: hidden;
 
